@@ -62,7 +62,7 @@ class Member {
 		this.rank = rank;
 	}
 
-	// showMember
+	//showmember
 	public void showMember() {
 		System.out.println("***MEMBER DATA***");
 		System.out.println("id:" + id);
@@ -71,6 +71,7 @@ class Member {
 		System.out.println("age:" + age);
 		System.out.println("rank:" + rank);
 		System.out.println("*****************");
+
 	}
 
 }
