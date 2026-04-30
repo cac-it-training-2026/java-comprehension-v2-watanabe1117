@@ -1,0 +1,81 @@
+package q01_basic.question06;
+
+public class Member extends AbstMember {
+	private int id;
+	private String password;
+	private int age;
+	private int rank;
+
+	// 引数なしコンストラクタ
+	public Member() {
+	}
+
+	// 引数ありコンストラクタ
+	public Member(int id, String password, String name, int age, int rank) {
+		this.id = id;
+		this.password = password;
+		this.name = name;
+		this.age = age;
+		this.rank = rank;
+	}
+
+	// getter / setter
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public int getRank() {
+		return rank;
+	}
+
+	public void setRank(int rank) {
+		this.rank = rank;
+	}
+
+	// buyItem メソッド
+	@Override
+	public void buyItem() {
+		System.out.println("商品を購入しました。");
+	}
+
+	// showMember メソッド
+	@Override
+	public void showMember() {
+		System.out.println("***MEMBER DATA***");
+		System.out.println("id:" + id);
+		System.out.println("password:" + password);
+		System.out.println("name:" + name);
+		System.out.println("age:" + age);
+		System.out.println("rank:" + rank);
+		System.out.println("*****************");
+	}
+
+}
