@@ -8,6 +8,14 @@ class MemberManager {
 	private MemberManager() {
 	}
 
-	//TODO showAllMembersメソッドを実装する
+	// 全件表示（static）
+	public static void showAllMembers(Member[] members) {
+
+		System.out.println("---SHOW ALL MEMBERS---");
+
+		for (Member m : members) {
+			m.showMember();
+		}
+	}
 
 }

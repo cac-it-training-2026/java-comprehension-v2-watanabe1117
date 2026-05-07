@@ -1,12 +1,23 @@
-package q01_basic.question04;
+package q01_basic.question06;
 
-class Member {
-	// フィールド
+public class Member extends AbstMember {
 	private int id;
 	private String password;
-	private String name;
 	private int age;
 	private int rank;
+
+	// 引数なしコンストラクタ
+	public Member() {
+	}
+
+	// 引数ありコンストラクタ
+	public Member(int id, String password, String name, int age, int rank) {
+		this.id = id;
+		this.password = password;
+		this.name = name;
+		this.age = age;
+		this.rank = rank;
+	}
 
 	// getter / setter
 	public int getId() {
@@ -49,20 +60,14 @@ class Member {
 		this.rank = rank;
 	}
 
-	// 引数なしコンストラクタ
-	public Member() {
+	// buyItem メソッド
+	@Override
+	public void buyItem() {
+		System.out.println("商品を購入しました。");
 	}
 
-	// 引数ありコンストラクタ
-	public Member(int id, String password, String name, int age, int rank) {
-		this.id = id;
-		this.password = password;
-		this.name = name;
-		this.age = age;
-		this.rank = rank;
-	}
-
-	//showmember
+	// showMember メソッド
+	@Override
 	public void showMember() {
 		System.out.println("***MEMBER DATA***");
 		System.out.println("id:" + id);
@@ -71,7 +76,6 @@ class Member {
 		System.out.println("age:" + age);
 		System.out.println("rank:" + rank);
 		System.out.println("*****************");
-
 	}
 
 }
